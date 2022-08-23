@@ -317,7 +317,7 @@
     </a>
 </div>
 <div>
-  <div *ngFor="let item in message">
+  <div *ngFor="let item of message;">
     <h1>Message Title: {{ item.data.title }}</h1>
     <h2>Message Body: {{ item.data.body }}</h2>
     <h2>Message Id: {{ item.messageId }}</h2>
