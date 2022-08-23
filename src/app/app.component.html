@@ -1,11 +1,3 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <style>
   :host {
@@ -326,8 +318,9 @@
 </div>
 <div>
   <div *ngIf="message;">
-    <h1>{{ message.notification.title }}</h1>
-    <h2>{{ message.notification.body }}</h2>
+    <h1>Message Title: {{ message.title }}</h1>
+    <h2>Message Body: {{ message.body }}</h2>
+    <h2>Message Id: {{ message.messageId }}</h2>
   </div>
   <div *ngIf="!message;">
     No Message Arrived
