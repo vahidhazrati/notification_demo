@@ -8,7 +8,7 @@ import { getMessaging, getToken, onMessage } from "firebase/messaging";
 })
 export class AppComponent implements OnInit{
   title = 'my-app';
-  message:any = null;
+  message : any[] = [];
   constructor() {}
   ngOnInit(): void {
     this.requestPermission();
@@ -33,7 +33,7 @@ export class AppComponent implements OnInit{
     const messaging = getMessaging();
     onMessage(messaging, (payload) => {
       console.log('Message received. ', payload);
-      this.message=payload;
+      this.message.push(payload);
     });
   }
 }
