@@ -324,7 +324,15 @@
       </svg>
     </a>
 </div>
-
+<div>
+  <div *ngIf="message;">
+    <h1>{{ message.notification.title }}</h1>
+    <h2>{{ message.notification.body }}</h2>
+  </div>
+  <div *ngIf="!message;">
+    No Message Arrived
+  </div>
+</div>
 <div class="content" role="main">
 
   <!-- Highlight Card -->
